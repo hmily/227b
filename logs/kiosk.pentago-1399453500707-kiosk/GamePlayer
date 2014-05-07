@@ -1,0 +1,378 @@
+LOG 1399453500734 [L0]: [Received at 1399453500734] ( START kiosk.pentago-1399453500707 black (( role red ) ( role black ) ( init ( placeControl red ) ) ( <= ( legal ?player ( place ?q ?x ?y ) ) ( role ?player ) ( true ( placeControl ?player ) ) ( cellEmpty ?q ?x ?y ) ) ( <= ( legal ?player ( rotate ?q ?dir ) ) ( quadrant ?q ) ( direction ?dir ) ( role ?player ) ( true ( rotateControl ?player ) ) ) ( <= ( legal ?player noop ) ( role ?player ) ( not ( true ( placeControl ?player ) ) ) ( not ( true ( rotateControl ?player ) ) ) ) ( <= ( next ( cellHolds ?q ?x ?y ?player ) ) ( role ?player ) ( does ?player ( place ?q ?x ?y ) ) ) ( <= ( next ( cellHolds ?q ?x ?y ?state ) ) ( true ( cellHolds ?q ?x ?y ?state ) ) ( role ?player ) ( does ?player ( place ?qAny ?xAny ?yAny ) ) ) ( <= ( next ( cellHolds ?q ?x2 ?y2 ?state ) ) ( role ?player ) ( does ?player ( rotate ?q ?dir ) ) ( true ( cellHolds ?q ?x1 ?y1 ?state ) ) ( rotation ?dir ?x1 ?y1 ?x2 ?y2 ) ) ( <= ( next ( cellHolds ?q1 ?x ?y ?state ) ) ( role ?player ) ( does ?player ( rotate ?q2 ?dirAny ) ) ( true ( cellHolds ?q1 ?x ?y ?state ) ) ( distinct ?q1 ?q2 ) ) ( <= ( next ( rotateControl red ) ) ( true ( placeControl red ) ) ) ( <= ( next ( placeControl red ) ) ( true ( rotateControl black ) ) ) ( <= ( next ( rotateControl black ) ) ( true ( placeControl black ) ) ) ( <= ( next ( placeControl black ) ) ( true ( rotateControl red ) ) ) ( <= terminal ( line red ) ) ( <= terminal ( line black ) ) ( <= terminal ( not boardOpen ) ) ( <= ( goal red 100 ) ( line red ) ( not ( line black ) ) ) ( <= ( goal red 50 ) ( not ( line red ) ) ( not ( line black ) ) ( not boardOpen ) ) ( <= ( goal red 50 ) ( line red ) ( line black ) ) ( <= ( goal red 0 ) ( line black ) ( not ( line red ) ) ) ( <= ( goal red 0 ) ( not ( line red ) ) ( not ( line black ) ) boardOpen ) ( <= ( goal black 100 ) ( line black ) ( not ( line red ) ) ) ( <= ( goal black 50 ) ( not ( line red ) ) ( not ( line black ) ) ( not boardOpen ) ) ( <= ( goal black 50 ) ( line red ) ( line black ) ) ( <= ( goal black 0 ) ( line red ) ( not ( line black ) ) ) ( <= ( goal black 0 ) ( not ( line red ) ) ( not ( line black ) ) boardOpen ) ( <= ( line ?player ) ( row ?player ) ) ( <= ( line ?player ) ( col ?player ) ) ( <= ( line ?player ) ( diag ?player ) ) ( <= ( row ?player ) ( role ?player ) ( true ( cellHolds ?q1 ?x1 ?y1 ?player ) ) ( globalIndex ?q1 ?x1 ?y1 ?x1G ?yG ) ( ++ ?x1G ?x2G ) ( true ( cellHolds ?q2 ?x2 ?y2 ?player ) ) ( globalIndex ?q2 ?x2 ?y2 ?x2G ?yG ) ( ++ ?x2G ?x3G ) ( true ( cellHolds ?q3 ?x3 ?y3 ?player ) ) ( globalIndex ?q3 ?x3 ?y3 ?x3G ?yG ) ( ++ ?x3G ?x4G ) ( true ( cellHolds ?q4 ?x4 ?y4 ?player ) ) ( globalIndex ?q4 ?x4 ?y4 ?x4G ?yG ) ( ++ ?x4G ?x5G ) ( true ( cellHolds ?q5 ?x5 ?y5 ?player ) ) ( globalIndex ?q5 ?x5 ?y5 ?x5G ?yG ) ) ( <= ( col ?player ) ( role ?player ) ( true ( cellHolds ?q1 ?x1 ?y1 ?player ) ) ( globalIndex ?q1 ?x1 ?y1 ?xG ?y1G ) ( ++ ?y1G ?y2G ) ( true ( cellHolds ?q2 ?x2 ?y2 ?player ) ) ( globalIndex ?q2 ?x2 ?y2 ?xG ?y2G ) ( ++ ?y2G ?y3G ) ( true ( cellHolds ?q3 ?x3 ?y3 ?player ) ) ( globalIndex ?q3 ?x3 ?y3 ?xG ?y3G ) ( ++ ?y3G ?y4G ) ( true ( cellHolds ?q4 ?x4 ?y4 ?player ) ) ( globalIndex ?q4 ?x4 ?y4 ?xG ?y4G ) ( ++ ?y4G ?y5G ) ( true ( cellHolds ?q5 ?x5 ?y5 ?player ) ) ( globalIndex ?q5 ?x5 ?y5 ?xG ?y5G ) ) ( <= ( diag ?player ) ( role ?player ) ( true ( cellHolds ?q1 ?x1 ?y1 ?player ) ) ( globalIndex ?q1 ?x1 ?y1 ?x1G ?y1G ) ( ++ ?x1G ?x2G ) ( ++ ?y1G ?y2G ) ( true ( cellHolds ?q2 ?x2 ?y2 ?player ) ) ( globalIndex ?q2 ?x2 ?y2 ?x2G ?y2G ) ( ++ ?x2G ?x3G ) ( ++ ?y2G ?y3G ) ( true ( cellHolds ?q3 ?x3 ?y3 ?player ) ) ( globalIndex ?q3 ?x3 ?y3 ?x3G ?y3G ) ( ++ ?x3G ?x4G ) ( ++ ?y3G ?y4G ) ( true ( cellHolds ?q4 ?x4 ?y4 ?player ) ) ( globalIndex ?q4 ?x4 ?y4 ?x4G ?y4G ) ( ++ ?x4G ?x5G ) ( ++ ?y4G ?y5G ) ( true ( cellHolds ?q5 ?x5 ?y5 ?player ) ) ( globalIndex ?q5 ?x5 ?y5 ?x5G ?y5G ) ) ( <= ( diag ?player ) ( role ?player ) ( true ( cellHolds ?q1 ?x1 ?y1 ?player ) ) ( globalIndex ?q1 ?x1 ?y1 ?x1G ?y5G ) ( ++ ?x1G ?x2G ) ( ++ ?y4G ?y5G ) ( true ( cellHolds ?q2 ?x2 ?y2 ?player ) ) ( globalIndex ?q2 ?x2 ?y2 ?x2G ?y4G ) ( ++ ?x2G ?x3G ) ( ++ ?y3G ?y4G ) ( true ( cellHolds ?q3 ?x3 ?y3 ?player ) ) ( globalIndex ?q3 ?x3 ?y3 ?x3G ?y3G ) ( ++ ?x3G ?x4G ) ( ++ ?y2G ?y3G ) ( true ( cellHolds ?q4 ?x4 ?y4 ?player ) ) ( globalIndex ?q4 ?x4 ?y4 ?x4G ?y2G ) ( ++ ?x4G ?x5G ) ( ++ ?y1G ?y2G ) ( true ( cellHolds ?q5 ?x5 ?y5 ?player ) ) ( globalIndex ?q5 ?x5 ?y5 ?x5G ?y1G ) ) ( <= ( globalIndex 1 ?x ?y ?xG ?yG ) ( + 3 ?x ?xG ) ( + 3 ?y ?yG ) ) ( <= ( globalIndex 2 ?x ?y ?x ?yG ) ( index ?x ) ( + 3 ?y ?yG ) ) ( <= ( globalIndex 3 ?x ?y ?x ?y ) ( index ?x ) ( index ?y ) ) ( <= ( globalIndex 4 ?x ?y ?xG ?y ) ( + 3 ?x ?xG ) ( index ?y ) ) ( <= ( rotation clockwise ?x1 ?y1 ?x2 ?y2 ) ( verticalFlip ?y1 ?x1 ?x2 ?y2 ) ) ( <= ( rotation counterclockwise ?x1 ?y1 ?x2 ?y2 ) ( horizontalFlip ?y1 ?x1 ?x2 ?y2 ) ) ( <= ( horizontalFlip 1 ?y 3 ?y ) ( index ?y ) ) ( <= ( horizontalFlip 2 ?y 2 ?y ) ( index ?y ) ) ( <= ( horizontalFlip 3 ?y 1 ?y ) ( index ?y ) ) ( <= ( verticalFlip ?x 1 ?x 3 ) ( index ?x ) ) ( <= ( verticalFlip ?x 2 ?x 2 ) ( index ?x ) ) ( <= ( verticalFlip ?x 3 ?x 1 ) ( index ?x ) ) ( <= ( cell ?q ?x ?y ) ( quadrant ?q ) ( index ?x ) ( index ?y ) ) ( <= ( cellEmpty ?q ?x ?y ) ( cell ?q ?x ?y ) ( not ( true ( cellHolds ?q ?x ?y red ) ) ) ( not ( true ( cellHolds ?q ?x ?y black ) ) ) ) ( <= boardOpen ( cellEmpty ?q ?x ?y ) ) ( index 1 ) ( index 2 ) ( index 3 ) ( quadrant 1 ) ( quadrant 2 ) ( quadrant 3 ) ( quadrant 4 ) ( direction clockwise ) ( direction counterclockwise ) ( ++ 1 2 ) ( ++ 2 3 ) ( ++ 3 4 ) ( ++ 4 5 ) ( ++ 5 6 ) ( + 3 1 4 ) ( + 3 2 5 ) ( + 3 3 6 ) ( <= ( base ( placeControl ?player ) ) ( role ?player ) ) ( <= ( base ( rotateControl ?player ) ) ( role ?player ) ) ( <= ( base ( cellHolds ?q ?x ?y ?state ) ) ( quadrant ?q ) ( index ?x ) ( index ?y ) ( role ?state ) ) ( <= ( input ?player noop ) ( role ?player ) ) ( <= ( input ?player ( place ?q ?x ?y ) ) ( role ?player ) ( quadrant ?q ) ( index ?x ) ( index ?y ) ) ( <= ( input ?player ( rotate ?q ?dir ) ) ( role ?player ) ( quadrant ?q ) ( direction ?dir ) ) ) 30 10)
+LOG 1399453500734 [L0]: [Received at 1399453500734] ( START kiosk.pentago-1399453500707 red (( role red ) ( role black ) ( init ( placeControl red ) ) ( <= ( legal ?player ( place ?q ?x ?y ) ) ( role ?player ) ( true ( placeControl ?player ) ) ( cellEmpty ?q ?x ?y ) ) ( <= ( legal ?player ( rotate ?q ?dir ) ) ( quadrant ?q ) ( direction ?dir ) ( role ?player ) ( true ( rotateControl ?player ) ) ) ( <= ( legal ?player noop ) ( role ?player ) ( not ( true ( placeControl ?player ) ) ) ( not ( true ( rotateControl ?player ) ) ) ) ( <= ( next ( cellHolds ?q ?x ?y ?player ) ) ( role ?player ) ( does ?player ( place ?q ?x ?y ) ) ) ( <= ( next ( cellHolds ?q ?x ?y ?state ) ) ( true ( cellHolds ?q ?x ?y ?state ) ) ( role ?player ) ( does ?player ( place ?qAny ?xAny ?yAny ) ) ) ( <= ( next ( cellHolds ?q ?x2 ?y2 ?state ) ) ( role ?player ) ( does ?player ( rotate ?q ?dir ) ) ( true ( cellHolds ?q ?x1 ?y1 ?state ) ) ( rotation ?dir ?x1 ?y1 ?x2 ?y2 ) ) ( <= ( next ( cellHolds ?q1 ?x ?y ?state ) ) ( role ?player ) ( does ?player ( rotate ?q2 ?dirAny ) ) ( true ( cellHolds ?q1 ?x ?y ?state ) ) ( distinct ?q1 ?q2 ) ) ( <= ( next ( rotateControl red ) ) ( true ( placeControl red ) ) ) ( <= ( next ( placeControl red ) ) ( true ( rotateControl black ) ) ) ( <= ( next ( rotateControl black ) ) ( true ( placeControl black ) ) ) ( <= ( next ( placeControl black ) ) ( true ( rotateControl red ) ) ) ( <= terminal ( line red ) ) ( <= terminal ( line black ) ) ( <= terminal ( not boardOpen ) ) ( <= ( goal red 100 ) ( line red ) ( not ( line black ) ) ) ( <= ( goal red 50 ) ( not ( line red ) ) ( not ( line black ) ) ( not boardOpen ) ) ( <= ( goal red 50 ) ( line red ) ( line black ) ) ( <= ( goal red 0 ) ( line black ) ( not ( line red ) ) ) ( <= ( goal red 0 ) ( not ( line red ) ) ( not ( line black ) ) boardOpen ) ( <= ( goal black 100 ) ( line black ) ( not ( line red ) ) ) ( <= ( goal black 50 ) ( not ( line red ) ) ( not ( line black ) ) ( not boardOpen ) ) ( <= ( goal black 50 ) ( line red ) ( line black ) ) ( <= ( goal black 0 ) ( line red ) ( not ( line black ) ) ) ( <= ( goal black 0 ) ( not ( line red ) ) ( not ( line black ) ) boardOpen ) ( <= ( line ?player ) ( row ?player ) ) ( <= ( line ?player ) ( col ?player ) ) ( <= ( line ?player ) ( diag ?player ) ) ( <= ( row ?player ) ( role ?player ) ( true ( cellHolds ?q1 ?x1 ?y1 ?player ) ) ( globalIndex ?q1 ?x1 ?y1 ?x1G ?yG ) ( ++ ?x1G ?x2G ) ( true ( cellHolds ?q2 ?x2 ?y2 ?player ) ) ( globalIndex ?q2 ?x2 ?y2 ?x2G ?yG ) ( ++ ?x2G ?x3G ) ( true ( cellHolds ?q3 ?x3 ?y3 ?player ) ) ( globalIndex ?q3 ?x3 ?y3 ?x3G ?yG ) ( ++ ?x3G ?x4G ) ( true ( cellHolds ?q4 ?x4 ?y4 ?player ) ) ( globalIndex ?q4 ?x4 ?y4 ?x4G ?yG ) ( ++ ?x4G ?x5G ) ( true ( cellHolds ?q5 ?x5 ?y5 ?player ) ) ( globalIndex ?q5 ?x5 ?y5 ?x5G ?yG ) ) ( <= ( col ?player ) ( role ?player ) ( true ( cellHolds ?q1 ?x1 ?y1 ?player ) ) ( globalIndex ?q1 ?x1 ?y1 ?xG ?y1G ) ( ++ ?y1G ?y2G ) ( true ( cellHolds ?q2 ?x2 ?y2 ?player ) ) ( globalIndex ?q2 ?x2 ?y2 ?xG ?y2G ) ( ++ ?y2G ?y3G ) ( true ( cellHolds ?q3 ?x3 ?y3 ?player ) ) ( globalIndex ?q3 ?x3 ?y3 ?xG ?y3G ) ( ++ ?y3G ?y4G ) ( true ( cellHolds ?q4 ?x4 ?y4 ?player ) ) ( globalIndex ?q4 ?x4 ?y4 ?xG ?y4G ) ( ++ ?y4G ?y5G ) ( true ( cellHolds ?q5 ?x5 ?y5 ?player ) ) ( globalIndex ?q5 ?x5 ?y5 ?xG ?y5G ) ) ( <= ( diag ?player ) ( role ?player ) ( true ( cellHolds ?q1 ?x1 ?y1 ?player ) ) ( globalIndex ?q1 ?x1 ?y1 ?x1G ?y1G ) ( ++ ?x1G ?x2G ) ( ++ ?y1G ?y2G ) ( true ( cellHolds ?q2 ?x2 ?y2 ?player ) ) ( globalIndex ?q2 ?x2 ?y2 ?x2G ?y2G ) ( ++ ?x2G ?x3G ) ( ++ ?y2G ?y3G ) ( true ( cellHolds ?q3 ?x3 ?y3 ?player ) ) ( globalIndex ?q3 ?x3 ?y3 ?x3G ?y3G ) ( ++ ?x3G ?x4G ) ( ++ ?y3G ?y4G ) ( true ( cellHolds ?q4 ?x4 ?y4 ?player ) ) ( globalIndex ?q4 ?x4 ?y4 ?x4G ?y4G ) ( ++ ?x4G ?x5G ) ( ++ ?y4G ?y5G ) ( true ( cellHolds ?q5 ?x5 ?y5 ?player ) ) ( globalIndex ?q5 ?x5 ?y5 ?x5G ?y5G ) ) ( <= ( diag ?player ) ( role ?player ) ( true ( cellHolds ?q1 ?x1 ?y1 ?player ) ) ( globalIndex ?q1 ?x1 ?y1 ?x1G ?y5G ) ( ++ ?x1G ?x2G ) ( ++ ?y4G ?y5G ) ( true ( cellHolds ?q2 ?x2 ?y2 ?player ) ) ( globalIndex ?q2 ?x2 ?y2 ?x2G ?y4G ) ( ++ ?x2G ?x3G ) ( ++ ?y3G ?y4G ) ( true ( cellHolds ?q3 ?x3 ?y3 ?player ) ) ( globalIndex ?q3 ?x3 ?y3 ?x3G ?y3G ) ( ++ ?x3G ?x4G ) ( ++ ?y2G ?y3G ) ( true ( cellHolds ?q4 ?x4 ?y4 ?player ) ) ( globalIndex ?q4 ?x4 ?y4 ?x4G ?y2G ) ( ++ ?x4G ?x5G ) ( ++ ?y1G ?y2G ) ( true ( cellHolds ?q5 ?x5 ?y5 ?player ) ) ( globalIndex ?q5 ?x5 ?y5 ?x5G ?y1G ) ) ( <= ( globalIndex 1 ?x ?y ?xG ?yG ) ( + 3 ?x ?xG ) ( + 3 ?y ?yG ) ) ( <= ( globalIndex 2 ?x ?y ?x ?yG ) ( index ?x ) ( + 3 ?y ?yG ) ) ( <= ( globalIndex 3 ?x ?y ?x ?y ) ( index ?x ) ( index ?y ) ) ( <= ( globalIndex 4 ?x ?y ?xG ?y ) ( + 3 ?x ?xG ) ( index ?y ) ) ( <= ( rotation clockwise ?x1 ?y1 ?x2 ?y2 ) ( verticalFlip ?y1 ?x1 ?x2 ?y2 ) ) ( <= ( rotation counterclockwise ?x1 ?y1 ?x2 ?y2 ) ( horizontalFlip ?y1 ?x1 ?x2 ?y2 ) ) ( <= ( horizontalFlip 1 ?y 3 ?y ) ( index ?y ) ) ( <= ( horizontalFlip 2 ?y 2 ?y ) ( index ?y ) ) ( <= ( horizontalFlip 3 ?y 1 ?y ) ( index ?y ) ) ( <= ( verticalFlip ?x 1 ?x 3 ) ( index ?x ) ) ( <= ( verticalFlip ?x 2 ?x 2 ) ( index ?x ) ) ( <= ( verticalFlip ?x 3 ?x 1 ) ( index ?x ) ) ( <= ( cell ?q ?x ?y ) ( quadrant ?q ) ( index ?x ) ( index ?y ) ) ( <= ( cellEmpty ?q ?x ?y ) ( cell ?q ?x ?y ) ( not ( true ( cellHolds ?q ?x ?y red ) ) ) ( not ( true ( cellHolds ?q ?x ?y black ) ) ) ) ( <= boardOpen ( cellEmpty ?q ?x ?y ) ) ( index 1 ) ( index 2 ) ( index 3 ) ( quadrant 1 ) ( quadrant 2 ) ( quadrant 3 ) ( quadrant 4 ) ( direction clockwise ) ( direction counterclockwise ) ( ++ 1 2 ) ( ++ 2 3 ) ( ++ 3 4 ) ( ++ 4 5 ) ( ++ 5 6 ) ( + 3 1 4 ) ( + 3 2 5 ) ( + 3 3 6 ) ( <= ( base ( placeControl ?player ) ) ( role ?player ) ) ( <= ( base ( rotateControl ?player ) ) ( role ?player ) ) ( <= ( base ( cellHolds ?q ?x ?y ?state ) ) ( quadrant ?q ) ( index ?x ) ( index ?y ) ( role ?state ) ) ( <= ( input ?player noop ) ( role ?player ) ) ( <= ( input ?player ( place ?q ?x ?y ) ) ( role ?player ) ( quadrant ?q ) ( index ?x ) ( index ?y ) ) ( <= ( input ?player ( rotate ?q ?dir ) ) ( role ?player ) ( quadrant ?q ) ( direction ?dir ) ) ) 30 10)
+LOG 1399453500736 [L9]: <ERR> Got start message while already busy playing a game: ignoring.
+LOG 1399453500736 [L9]: <ERR> Got start message while already busy playing a game: ignoring.
+LOG 1399453500737 [L0]: [Sent at 1399453500737] busy
+LOG 1399453500737 [L0]: [Sent at 1399453500737] busy
+LOG 1399453500748 [L0]: [Received at 1399453500748] ( PLAY kiosk.pentago-1399453500707 NIL )
+LOG 1399453500748 [L0]: [Received at 1399453500748] ( PLAY kiosk.pentago-1399453500707 NIL )
+LOG 1399453500749 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500749 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500749 [L0]: [Sent at 1399453500749] busy
+LOG 1399453500749 [L0]: [Sent at 1399453500749] busy
+LOG 1399453500756 [L0]: [Received at 1399453500756] ( PLAY kiosk.pentago-1399453500707 (( place 2 2 2 ) noop ) )
+LOG 1399453500756 [L0]: [Received at 1399453500756] ( PLAY kiosk.pentago-1399453500707 (( place 2 2 2 ) noop ) )
+LOG 1399453500757 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500757 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500757 [L0]: [Sent at 1399453500757] busy
+LOG 1399453500757 [L0]: [Sent at 1399453500757] busy
+LOG 1399453500763 [L0]: [Received at 1399453500763] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 clockwise ) noop ) )
+LOG 1399453500763 [L0]: [Received at 1399453500763] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 clockwise ) noop ) )
+LOG 1399453500763 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500763 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500764 [L0]: [Sent at 1399453500764] busy
+LOG 1399453500764 [L0]: [Sent at 1399453500764] busy
+LOG 1399453500774 [L0]: [Received at 1399453500774] ( PLAY kiosk.pentago-1399453500707 (noop ( place 2 3 3 ) ) )
+LOG 1399453500774 [L0]: [Received at 1399453500774] ( PLAY kiosk.pentago-1399453500707 (noop ( place 2 3 3 ) ) )
+LOG 1399453500774 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500774 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500774 [L0]: [Sent at 1399453500774] busy
+LOG 1399453500774 [L0]: [Sent at 1399453500774] busy
+LOG 1399453500782 [L0]: [Received at 1399453500782] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 2 clockwise ) ) )
+LOG 1399453500782 [L0]: [Received at 1399453500782] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 2 clockwise ) ) )
+LOG 1399453500782 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500782 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500782 [L0]: [Sent at 1399453500782] busy
+LOG 1399453500783 [L0]: [Sent at 1399453500783] busy
+LOG 1399453500791 [L0]: [Received at 1399453500791] ( PLAY kiosk.pentago-1399453500707 (( place 1 2 1 ) noop ) )
+LOG 1399453500791 [L0]: [Received at 1399453500791] ( PLAY kiosk.pentago-1399453500707 (( place 1 2 1 ) noop ) )
+LOG 1399453500791 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500791 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500792 [L0]: [Sent at 1399453500792] busy
+LOG 1399453500792 [L0]: [Sent at 1399453500792] busy
+LOG 1399453500796 [L0]: [Received at 1399453500796] ( PLAY kiosk.pentago-1399453500707 (( rotate 4 clockwise ) noop ) )
+LOG 1399453500796 [L0]: [Received at 1399453500796] ( PLAY kiosk.pentago-1399453500707 (( rotate 4 clockwise ) noop ) )
+LOG 1399453500796 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500796 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500797 [L0]: [Sent at 1399453500797] busy
+LOG 1399453500797 [L0]: [Sent at 1399453500797] busy
+LOG 1399453500801 [L0]: [Received at 1399453500801] ( PLAY kiosk.pentago-1399453500707 (noop ( place 2 3 3 ) ) )
+LOG 1399453500801 [L0]: [Received at 1399453500801] ( PLAY kiosk.pentago-1399453500707 (noop ( place 2 3 3 ) ) )
+LOG 1399453500801 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500801 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500801 [L0]: [Sent at 1399453500801] busy
+LOG 1399453500802 [L0]: [Sent at 1399453500802] busy
+LOG 1399453500808 [L0]: [Received at 1399453500808] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 1 counterclockwise ) ) )
+LOG 1399453500808 [L0]: [Received at 1399453500808] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 1 counterclockwise ) ) )
+LOG 1399453500808 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500808 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500809 [L0]: [Sent at 1399453500809] busy
+LOG 1399453500809 [L0]: [Sent at 1399453500809] busy
+LOG 1399453500815 [L0]: [Received at 1399453500815] ( PLAY kiosk.pentago-1399453500707 (( place 4 1 2 ) noop ) )
+LOG 1399453500815 [L0]: [Received at 1399453500815] ( PLAY kiosk.pentago-1399453500707 (( place 4 1 2 ) noop ) )
+LOG 1399453500816 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500816 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500816 [L0]: [Sent at 1399453500816] busy
+LOG 1399453500816 [L0]: [Sent at 1399453500816] busy
+LOG 1399453500822 [L0]: [Received at 1399453500822] ( PLAY kiosk.pentago-1399453500707 (( rotate 2 counterclockwise ) noop ) )
+LOG 1399453500822 [L0]: [Received at 1399453500822] ( PLAY kiosk.pentago-1399453500707 (( rotate 2 counterclockwise ) noop ) )
+LOG 1399453500822 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500822 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500822 [L0]: [Sent at 1399453500822] busy
+LOG 1399453500822 [L0]: [Sent at 1399453500822] busy
+LOG 1399453500827 [L0]: [Received at 1399453500827] ( PLAY kiosk.pentago-1399453500707 (noop ( place 4 3 3 ) ) )
+LOG 1399453500827 [L0]: [Received at 1399453500827] ( PLAY kiosk.pentago-1399453500707 (noop ( place 4 3 3 ) ) )
+LOG 1399453500827 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500828 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500828 [L0]: [Sent at 1399453500828] busy
+LOG 1399453500828 [L0]: [Sent at 1399453500828] busy
+LOG 1399453500835 [L0]: [Received at 1399453500835] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 1 clockwise ) ) )
+LOG 1399453500835 [L0]: [Received at 1399453500835] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 1 clockwise ) ) )
+LOG 1399453500835 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500835 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500836 [L0]: [Sent at 1399453500836] busy
+LOG 1399453500836 [L0]: [Sent at 1399453500836] busy
+LOG 1399453500842 [L0]: [Received at 1399453500842] ( PLAY kiosk.pentago-1399453500707 (( place 1 3 2 ) noop ) )
+LOG 1399453500842 [L0]: [Received at 1399453500842] ( PLAY kiosk.pentago-1399453500707 (( place 1 3 2 ) noop ) )
+LOG 1399453500842 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500842 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500842 [L0]: [Sent at 1399453500842] busy
+LOG 1399453500842 [L0]: [Sent at 1399453500842] busy
+LOG 1399453500851 [L0]: [Received at 1399453500851] ( PLAY kiosk.pentago-1399453500707 (( rotate 4 clockwise ) noop ) )
+LOG 1399453500851 [L0]: [Received at 1399453500851] ( PLAY kiosk.pentago-1399453500707 (( rotate 4 clockwise ) noop ) )
+LOG 1399453500851 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500851 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500851 [L0]: [Sent at 1399453500851] busy
+LOG 1399453500851 [L0]: [Sent at 1399453500851] busy
+LOG 1399453500856 [L0]: [Received at 1399453500856] ( PLAY kiosk.pentago-1399453500707 (noop ( place 4 1 1 ) ) )
+LOG 1399453500856 [L0]: [Received at 1399453500856] ( PLAY kiosk.pentago-1399453500707 (noop ( place 4 1 1 ) ) )
+LOG 1399453500857 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500857 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500857 [L0]: [Sent at 1399453500857] busy
+LOG 1399453500857 [L0]: [Sent at 1399453500857] busy
+LOG 1399453500862 [L0]: [Received at 1399453500862] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 3 counterclockwise ) ) )
+LOG 1399453500862 [L0]: [Received at 1399453500862] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 3 counterclockwise ) ) )
+LOG 1399453500863 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500863 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500863 [L0]: [Sent at 1399453500863] busy
+LOG 1399453500863 [L0]: [Sent at 1399453500863] busy
+LOG 1399453500872 [L0]: [Received at 1399453500872] ( PLAY kiosk.pentago-1399453500707 (( place 2 1 1 ) noop ) )
+LOG 1399453500872 [L0]: [Received at 1399453500872] ( PLAY kiosk.pentago-1399453500707 (( place 2 1 1 ) noop ) )
+LOG 1399453500872 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500873 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500874 [L0]: [Sent at 1399453500873] busy
+LOG 1399453500874 [L0]: [Sent at 1399453500874] busy
+LOG 1399453500882 [L0]: [Received at 1399453500882] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 clockwise ) noop ) )
+LOG 1399453500882 [L0]: [Received at 1399453500882] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 clockwise ) noop ) )
+LOG 1399453500883 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500883 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500883 [L0]: [Sent at 1399453500883] busy
+LOG 1399453500883 [L0]: [Sent at 1399453500883] busy
+LOG 1399453500890 [L0]: [Received at 1399453500890] ( PLAY kiosk.pentago-1399453500707 (noop ( place 1 2 2 ) ) )
+LOG 1399453500890 [L0]: [Received at 1399453500890] ( PLAY kiosk.pentago-1399453500707 (noop ( place 1 2 2 ) ) )
+LOG 1399453500890 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500890 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500890 [L0]: [Sent at 1399453500890] busy
+LOG 1399453500890 [L0]: [Sent at 1399453500890] busy
+LOG 1399453500896 [L0]: [Received at 1399453500896] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 3 clockwise ) ) )
+LOG 1399453500896 [L0]: [Received at 1399453500896] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 3 clockwise ) ) )
+LOG 1399453500897 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500897 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500897 [L0]: [Sent at 1399453500897] busy
+LOG 1399453500897 [L0]: [Sent at 1399453500897] busy
+LOG 1399453500902 [L0]: [Received at 1399453500902] ( PLAY kiosk.pentago-1399453500707 (( place 4 3 3 ) noop ) )
+LOG 1399453500902 [L0]: [Received at 1399453500902] ( PLAY kiosk.pentago-1399453500707 (( place 4 3 3 ) noop ) )
+LOG 1399453500902 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500902 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500902 [L0]: [Sent at 1399453500902] busy
+LOG 1399453500902 [L0]: [Sent at 1399453500902] busy
+LOG 1399453500907 [L0]: [Received at 1399453500907] ( PLAY kiosk.pentago-1399453500707 (( rotate 3 counterclockwise ) noop ) )
+LOG 1399453500907 [L0]: [Received at 1399453500907] ( PLAY kiosk.pentago-1399453500707 (( rotate 3 counterclockwise ) noop ) )
+LOG 1399453500907 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500908 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500908 [L0]: [Sent at 1399453500908] busy
+LOG 1399453500908 [L0]: [Sent at 1399453500908] busy
+LOG 1399453500912 [L0]: [Received at 1399453500912] ( PLAY kiosk.pentago-1399453500707 (noop ( place 4 2 1 ) ) )
+LOG 1399453500912 [L0]: [Received at 1399453500912] ( PLAY kiosk.pentago-1399453500707 (noop ( place 4 2 1 ) ) )
+LOG 1399453500913 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500914 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500915 [L0]: [Sent at 1399453500915] busy
+LOG 1399453500915 [L0]: [Sent at 1399453500915] busy
+LOG 1399453500923 [L0]: [Received at 1399453500923] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 counterclockwise ) ) )
+LOG 1399453500923 [L0]: [Received at 1399453500923] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 counterclockwise ) ) )
+LOG 1399453500923 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500923 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500923 [L0]: [Sent at 1399453500923] busy
+LOG 1399453500923 [L0]: [Sent at 1399453500923] busy
+LOG 1399453500929 [L0]: [Received at 1399453500929] ( PLAY kiosk.pentago-1399453500707 (( place 3 1 2 ) noop ) )
+LOG 1399453500929 [L0]: [Received at 1399453500929] ( PLAY kiosk.pentago-1399453500707 (( place 3 1 2 ) noop ) )
+LOG 1399453500929 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500929 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500929 [L0]: [Sent at 1399453500929] busy
+LOG 1399453500930 [L0]: [Sent at 1399453500930] busy
+LOG 1399453500935 [L0]: [Received at 1399453500935] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 counterclockwise ) noop ) )
+LOG 1399453500935 [L0]: [Received at 1399453500935] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 counterclockwise ) noop ) )
+LOG 1399453500935 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500935 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500935 [L0]: [Sent at 1399453500935] busy
+LOG 1399453500935 [L0]: [Sent at 1399453500935] busy
+LOG 1399453500940 [L0]: [Received at 1399453500940] ( PLAY kiosk.pentago-1399453500707 (noop ( place 1 3 1 ) ) )
+LOG 1399453500940 [L0]: [Received at 1399453500940] ( PLAY kiosk.pentago-1399453500707 (noop ( place 1 3 1 ) ) )
+LOG 1399453500940 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500940 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500940 [L0]: [Sent at 1399453500940] busy
+LOG 1399453500941 [L0]: [Sent at 1399453500941] busy
+LOG 1399453500946 [L0]: [Received at 1399453500946] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 clockwise ) ) )
+LOG 1399453500946 [L0]: [Received at 1399453500946] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 clockwise ) ) )
+LOG 1399453500946 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500946 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500946 [L0]: [Sent at 1399453500946] busy
+LOG 1399453500947 [L0]: [Sent at 1399453500947] busy
+LOG 1399453500952 [L0]: [Received at 1399453500952] ( PLAY kiosk.pentago-1399453500707 (( place 2 3 2 ) noop ) )
+LOG 1399453500952 [L0]: [Received at 1399453500952] ( PLAY kiosk.pentago-1399453500707 (( place 2 3 2 ) noop ) )
+LOG 1399453500952 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500952 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500952 [L0]: [Sent at 1399453500952] busy
+LOG 1399453500952 [L0]: [Sent at 1399453500952] busy
+LOG 1399453500959 [L0]: [Received at 1399453500959] ( PLAY kiosk.pentago-1399453500707 (( rotate 3 clockwise ) noop ) )
+LOG 1399453500959 [L0]: [Received at 1399453500959] ( PLAY kiosk.pentago-1399453500707 (( rotate 3 clockwise ) noop ) )
+LOG 1399453500959 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500959 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500959 [L0]: [Sent at 1399453500959] busy
+LOG 1399453500960 [L0]: [Sent at 1399453500960] busy
+LOG 1399453500967 [L0]: [Received at 1399453500967] ( PLAY kiosk.pentago-1399453500707 (noop ( place 2 3 1 ) ) )
+LOG 1399453500967 [L0]: [Received at 1399453500967] ( PLAY kiosk.pentago-1399453500707 (noop ( place 2 3 1 ) ) )
+LOG 1399453500967 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500967 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500967 [L0]: [Sent at 1399453500967] busy
+LOG 1399453500967 [L0]: [Sent at 1399453500967] busy
+LOG 1399453500973 [L0]: [Received at 1399453500973] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 counterclockwise ) ) )
+LOG 1399453500973 [L0]: [Received at 1399453500973] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 counterclockwise ) ) )
+LOG 1399453500973 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500973 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500973 [L0]: [Sent at 1399453500973] busy
+LOG 1399453500973 [L0]: [Sent at 1399453500973] busy
+LOG 1399453500979 [L0]: [Received at 1399453500979] ( PLAY kiosk.pentago-1399453500707 (( place 3 1 1 ) noop ) )
+LOG 1399453500979 [L0]: [Received at 1399453500979] ( PLAY kiosk.pentago-1399453500707 (( place 3 1 1 ) noop ) )
+LOG 1399453500979 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500979 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500980 [L0]: [Sent at 1399453500980] busy
+LOG 1399453500980 [L0]: [Sent at 1399453500980] busy
+LOG 1399453500986 [L0]: [Received at 1399453500986] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 counterclockwise ) noop ) )
+LOG 1399453500986 [L0]: [Received at 1399453500986] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 counterclockwise ) noop ) )
+LOG 1399453500986 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500986 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500987 [L0]: [Sent at 1399453500987] busy
+LOG 1399453500987 [L0]: [Sent at 1399453500987] busy
+LOG 1399453500992 [L0]: [Received at 1399453500992] ( PLAY kiosk.pentago-1399453500707 (noop ( place 2 2 3 ) ) )
+LOG 1399453500992 [L0]: [Received at 1399453500992] ( PLAY kiosk.pentago-1399453500707 (noop ( place 2 2 3 ) ) )
+LOG 1399453500993 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500993 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453500993 [L0]: [Sent at 1399453500993] busy
+LOG 1399453500993 [L0]: [Sent at 1399453500993] busy
+LOG 1399453501000 [L0]: [Received at 1399453501000] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 2 clockwise ) ) )
+LOG 1399453501000 [L0]: [Received at 1399453501000] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 2 clockwise ) ) )
+LOG 1399453501000 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501000 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501000 [L0]: [Sent at 1399453501000] busy
+LOG 1399453501001 [L0]: [Sent at 1399453501001] busy
+LOG 1399453501006 [L0]: [Received at 1399453501006] ( PLAY kiosk.pentago-1399453500707 (( place 1 3 1 ) noop ) )
+LOG 1399453501006 [L0]: [Received at 1399453501006] ( PLAY kiosk.pentago-1399453500707 (( place 1 3 1 ) noop ) )
+LOG 1399453501007 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501007 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501007 [L0]: [Sent at 1399453501007] busy
+LOG 1399453501007 [L0]: [Sent at 1399453501007] busy
+LOG 1399453501014 [L0]: [Received at 1399453501014] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 clockwise ) noop ) )
+LOG 1399453501014 [L0]: [Received at 1399453501014] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 clockwise ) noop ) )
+LOG 1399453501014 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501014 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501014 [L0]: [Sent at 1399453501014] busy
+LOG 1399453501014 [L0]: [Sent at 1399453501014] busy
+LOG 1399453501022 [L0]: [Received at 1399453501022] ( PLAY kiosk.pentago-1399453500707 (noop ( place 3 3 1 ) ) )
+LOG 1399453501022 [L0]: [Received at 1399453501022] ( PLAY kiosk.pentago-1399453500707 (noop ( place 3 3 1 ) ) )
+LOG 1399453501023 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501023 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501023 [L0]: [Sent at 1399453501023] busy
+LOG 1399453501023 [L0]: [Sent at 1399453501023] busy
+LOG 1399453501032 [L0]: [Received at 1399453501032] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 2 clockwise ) ) )
+LOG 1399453501032 [L0]: [Received at 1399453501032] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 2 clockwise ) ) )
+LOG 1399453501032 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501032 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501032 [L0]: [Sent at 1399453501032] busy
+LOG 1399453501032 [L0]: [Sent at 1399453501032] busy
+LOG 1399453501043 [L0]: [Received at 1399453501043] ( PLAY kiosk.pentago-1399453500707 (( place 4 2 1 ) noop ) )
+LOG 1399453501043 [L0]: [Received at 1399453501043] ( PLAY kiosk.pentago-1399453500707 (( place 4 2 1 ) noop ) )
+LOG 1399453501043 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501043 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501043 [L0]: [Sent at 1399453501043] busy
+LOG 1399453501043 [L0]: [Sent at 1399453501043] busy
+LOG 1399453501052 [L0]: [Received at 1399453501052] ( PLAY kiosk.pentago-1399453500707 (( rotate 2 counterclockwise ) noop ) )
+LOG 1399453501052 [L0]: [Received at 1399453501052] ( PLAY kiosk.pentago-1399453500707 (( rotate 2 counterclockwise ) noop ) )
+LOG 1399453501052 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501052 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501052 [L0]: [Sent at 1399453501052] busy
+LOG 1399453501053 [L0]: [Sent at 1399453501053] busy
+LOG 1399453501062 [L0]: [Received at 1399453501062] ( PLAY kiosk.pentago-1399453500707 (noop ( place 1 1 3 ) ) )
+LOG 1399453501062 [L0]: [Received at 1399453501062] ( PLAY kiosk.pentago-1399453500707 (noop ( place 1 1 3 ) ) )
+LOG 1399453501062 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501062 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501062 [L0]: [Sent at 1399453501062] busy
+LOG 1399453501062 [L0]: [Sent at 1399453501062] busy
+LOG 1399453501074 [L0]: [Received at 1399453501074] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 3 counterclockwise ) ) )
+LOG 1399453501074 [L0]: [Received at 1399453501074] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 3 counterclockwise ) ) )
+LOG 1399453501074 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501074 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501074 [L0]: [Sent at 1399453501074] busy
+LOG 1399453501075 [L0]: [Sent at 1399453501075] busy
+LOG 1399453501083 [L0]: [Received at 1399453501083] ( PLAY kiosk.pentago-1399453500707 (( place 3 2 3 ) noop ) )
+LOG 1399453501083 [L0]: [Received at 1399453501083] ( PLAY kiosk.pentago-1399453500707 (( place 3 2 3 ) noop ) )
+LOG 1399453501083 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501083 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501084 [L0]: [Sent at 1399453501084] busy
+LOG 1399453501084 [L0]: [Sent at 1399453501084] busy
+LOG 1399453501094 [L0]: [Received at 1399453501094] ( PLAY kiosk.pentago-1399453500707 (( rotate 4 clockwise ) noop ) )
+LOG 1399453501094 [L0]: [Received at 1399453501094] ( PLAY kiosk.pentago-1399453500707 (( rotate 4 clockwise ) noop ) )
+LOG 1399453501094 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501094 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501094 [L0]: [Sent at 1399453501094] busy
+LOG 1399453501094 [L0]: [Sent at 1399453501094] busy
+LOG 1399453501102 [L0]: [Received at 1399453501102] ( PLAY kiosk.pentago-1399453500707 (noop ( place 1 2 3 ) ) )
+LOG 1399453501102 [L0]: [Received at 1399453501102] ( PLAY kiosk.pentago-1399453500707 (noop ( place 1 2 3 ) ) )
+LOG 1399453501102 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501102 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501103 [L0]: [Sent at 1399453501103] busy
+LOG 1399453501103 [L0]: [Sent at 1399453501103] busy
+LOG 1399453501113 [L0]: [Received at 1399453501113] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 2 clockwise ) ) )
+LOG 1399453501113 [L0]: [Received at 1399453501113] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 2 clockwise ) ) )
+LOG 1399453501113 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501113 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501113 [L0]: [Sent at 1399453501113] busy
+LOG 1399453501113 [L0]: [Sent at 1399453501113] busy
+LOG 1399453501123 [L0]: [Received at 1399453501123] ( PLAY kiosk.pentago-1399453500707 (( place 3 1 3 ) noop ) )
+LOG 1399453501123 [L0]: [Received at 1399453501123] ( PLAY kiosk.pentago-1399453500707 (( place 3 1 3 ) noop ) )
+LOG 1399453501123 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501123 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501124 [L0]: [Sent at 1399453501124] busy
+LOG 1399453501124 [L0]: [Sent at 1399453501124] busy
+LOG 1399453501136 [L0]: [Received at 1399453501136] ( PLAY kiosk.pentago-1399453500707 (( rotate 3 counterclockwise ) noop ) )
+LOG 1399453501136 [L0]: [Received at 1399453501136] ( PLAY kiosk.pentago-1399453500707 (( rotate 3 counterclockwise ) noop ) )
+LOG 1399453501137 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501137 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501137 [L0]: [Sent at 1399453501137] busy
+LOG 1399453501137 [L0]: [Sent at 1399453501137] busy
+LOG 1399453501146 [L0]: [Received at 1399453501146] ( PLAY kiosk.pentago-1399453500707 (noop ( place 3 2 2 ) ) )
+LOG 1399453501146 [L0]: [Received at 1399453501146] ( PLAY kiosk.pentago-1399453500707 (noop ( place 3 2 2 ) ) )
+LOG 1399453501146 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501146 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501147 [L0]: [Sent at 1399453501147] busy
+LOG 1399453501147 [L0]: [Sent at 1399453501147] busy
+LOG 1399453501155 [L0]: [Received at 1399453501155] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 counterclockwise ) ) )
+LOG 1399453501155 [L0]: [Received at 1399453501155] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 counterclockwise ) ) )
+LOG 1399453501156 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501156 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501156 [L0]: [Sent at 1399453501156] busy
+LOG 1399453501156 [L0]: [Sent at 1399453501156] busy
+LOG 1399453501165 [L0]: [Received at 1399453501165] ( PLAY kiosk.pentago-1399453500707 (( place 3 3 1 ) noop ) )
+LOG 1399453501165 [L0]: [Received at 1399453501165] ( PLAY kiosk.pentago-1399453500707 (( place 3 3 1 ) noop ) )
+LOG 1399453501166 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501166 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501166 [L0]: [Sent at 1399453501166] busy
+LOG 1399453501166 [L0]: [Sent at 1399453501166] busy
+LOG 1399453501183 [L0]: [Received at 1399453501183] ( PLAY kiosk.pentago-1399453500707 (( rotate 2 counterclockwise ) noop ) )
+LOG 1399453501183 [L0]: [Received at 1399453501183] ( PLAY kiosk.pentago-1399453500707 (( rotate 2 counterclockwise ) noop ) )
+LOG 1399453501183 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501183 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501184 [L0]: [Sent at 1399453501184] busy
+LOG 1399453501184 [L0]: [Sent at 1399453501184] busy
+LOG 1399453501191 [L0]: [Received at 1399453501191] ( PLAY kiosk.pentago-1399453500707 (noop ( place 3 2 3 ) ) )
+LOG 1399453501191 [L0]: [Received at 1399453501191] ( PLAY kiosk.pentago-1399453500707 (noop ( place 3 2 3 ) ) )
+LOG 1399453501191 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501191 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501192 [L0]: [Sent at 1399453501192] busy
+LOG 1399453501192 [L0]: [Sent at 1399453501192] busy
+LOG 1399453501200 [L0]: [Received at 1399453501200] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 clockwise ) ) )
+LOG 1399453501200 [L0]: [Received at 1399453501200] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 clockwise ) ) )
+LOG 1399453501200 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501200 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501200 [L0]: [Sent at 1399453501200] busy
+LOG 1399453501200 [L0]: [Sent at 1399453501200] busy
+LOG 1399453501208 [L0]: [Received at 1399453501208] ( PLAY kiosk.pentago-1399453500707 (( place 1 1 2 ) noop ) )
+LOG 1399453501208 [L0]: [Received at 1399453501208] ( PLAY kiosk.pentago-1399453500707 (( place 1 1 2 ) noop ) )
+LOG 1399453501208 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501208 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501209 [L0]: [Sent at 1399453501209] busy
+LOG 1399453501209 [L0]: [Sent at 1399453501209] busy
+LOG 1399453501218 [L0]: [Received at 1399453501218] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 counterclockwise ) noop ) )
+LOG 1399453501218 [L0]: [Received at 1399453501218] ( PLAY kiosk.pentago-1399453500707 (( rotate 1 counterclockwise ) noop ) )
+LOG 1399453501218 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501218 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501219 [L0]: [Sent at 1399453501219] busy
+LOG 1399453501219 [L0]: [Sent at 1399453501219] busy
+LOG 1399453501227 [L0]: [Received at 1399453501227] ( PLAY kiosk.pentago-1399453500707 (noop ( place 4 1 3 ) ) )
+LOG 1399453501227 [L0]: [Received at 1399453501227] ( PLAY kiosk.pentago-1399453500707 (noop ( place 4 1 3 ) ) )
+LOG 1399453501227 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501227 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501227 [L0]: [Sent at 1399453501227] busy
+LOG 1399453501227 [L0]: [Sent at 1399453501227] busy
+LOG 1399453501236 [L0]: [Received at 1399453501236] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 counterclockwise ) ) )
+LOG 1399453501236 [L0]: [Received at 1399453501236] ( PLAY kiosk.pentago-1399453500707 (noop ( rotate 4 counterclockwise ) ) )
+LOG 1399453501237 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501237 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1399453501237 [L0]: [Sent at 1399453501237] busy
+LOG 1399453501237 [L0]: [Sent at 1399453501237] busy
+LOG 1399453501265 [L0]: [Received at 1399453501265] ( STOP kiosk.pentago-1399453500707 (( place 2 1 2 ) noop ) )
+LOG 1399453501265 [L0]: [Received at 1399453501265] ( STOP kiosk.pentago-1399453500707 (( place 2 1 2 ) noop ) )
+LOG 1399453501266 [L9]: <ERR> Got stop message not intended for current game: ignoring.
+LOG 1399453501266 [L9]: <ERR> Got stop message not intended for current game: ignoring.
+LOG 1399453501266 [L0]: [Sent at 1399453501266] busy
+LOG 1399453501266 [L0]: [Sent at 1399453501266] busy
